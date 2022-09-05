@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/employees"
+    app:startDestination="@id/employeesListFragment">
+
+    <fragment
+        android:id="@+id/employeesListFragment"
+        android:name="com.mozper.codingtest.presentation.employees.EmployeesListFragment"
+        android:label="@string/employees">
+
+        <action
+            android:id="@+id/actionEmployeesDetailsFragment"
+            app:destination="@id/employeesDetailsFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/employeesDetailsFragment"
+        android:name="com.mozper.codingtest.presentation.employees.EmployeesDetailsFragment"
+        android:label="@string/employee_detail">
+
+        <argument
+            android:name="id"
+            app:argType="integer" />
+
+    </fragment>
+
+</navigation>

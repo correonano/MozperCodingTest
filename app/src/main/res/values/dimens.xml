@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="small_margin">8dp</dimen>
+    <dimen name="big_margin_top">36dp</dimen>
+
+    <dimen name="edit_text_height">40dp</dimen>
+
+    <dimen name="material_start_big_margin">72dp</dimen>
+    <dimen name="material_top_margin">20dp</dimen>
+    <dimen name="material_standar_margin">16dp</dimen>
+
+    <dimen name="title_size_font">28sp</dimen>
+    <dimen name="line_size_font">20sp</dimen>
+    <dimen name="big_size_font">18sp</dimen>
+    <dimen name="normal_size_font">16sp</dimen>
+
+</resources>

@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Mozper App</string>
+
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="logout">Logout</string>
+    <string name="rating">Rating: %1$f</string>
+
+    <string name="employees">Employees</string>
+    <string name="employee_detail">Employee Details</string>
+
+    <string name="generic_error">Please try again</string>
+    <string name="error_username">Complete Username</string>
+    <string name="error_password">Complete Password</string>
+
+</resources>

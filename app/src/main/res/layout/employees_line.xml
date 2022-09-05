@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout >
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.mozper.codingtest.presentation.employees.EmployeesViewModel" />
+
+        <variable
+            name="item"
+            type="com.mozper.codingtest.data.model.Employee" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:onClick="@{() -> viewModel.onItemClick(item.id)}"
+        android:layout_margin="10dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/employeeImage"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            app:imageUrl="@{item.image}"
+            app:shapeAppearanceOverlay="@style/CircleImageView"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            android:layout_margin="@dimen/material_standar_margin"/>
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@id/employeeImage"
+            app:layout_constraintTop_toTopOf="@id/employeeImage"
+            app:layout_constraintBottom_toBottomOf="@id/employeeImage"
+            android:textSize="@dimen/line_size_font"
+            android:layout_marginStart="@dimen/material_standar_margin"
+            android:layout_marginEnd="@dimen/material_standar_margin"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            android:text="@{item.firstName}"
+            tools:text="first"
+            android:textAppearance="?attr/textAppearanceSubtitle1"/>
+
+        <TextView
+            android:id="@+id/last"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@id/name"
+            app:layout_constraintTop_toTopOf="@id/employeeImage"
+            app:layout_constraintBottom_toBottomOf="@id/employeeImage"
+            android:textSize="@dimen/line_size_font"
+            android:layout_marginStart="4dp"
+            android:text="@{item.lastName}"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            tools:text="lastname"
+            android:textAppearance="?attr/textAppearanceSubtitle1"/>
+
+        <TextView
+            android:id="@+id/desc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@{item.description}"
+            app:layout_constraintTop_toBottomOf="@+id/name"
+            app:layout_constraintStart_toEndOf="@id/employeeImage"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textAppearance="?attr/textAppearanceBody2"
+            android:layout_marginStart="@dimen/material_standar_margin"
+            android:layout_marginEnd="@dimen/material_standar_margin"
+            android:ellipsize="end"
+            android:maxLines="1"
+            tools:text="desc desc desc desc desc desc desc desc"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
